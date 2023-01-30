@@ -27,7 +27,9 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 func lineHandler(w http.ResponseWriter, r *http.Request) {
 	// BOTを初期化
 	bot, err := linebot.New(
+		// シークレットキー
 		accessKey.GetSecretKey(),
+		// アクセスキー
 		accessKey.GetAccessKey(),
 	)
 	if err != nil {
